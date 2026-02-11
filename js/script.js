@@ -20,17 +20,15 @@ for (let i = 0; i < 6; i++) {
 const navbar = document.querySelector(".navbar");
 
 const startColor = { r: 10, g: 46, b: 54 }; // #0A2E36
-const endColor = { r: 0, g: 206, b: 209 };   // #00CED1
+const endColor = { r: 0, g: 139, b: 139 };   // #008B8B (sesuai warna latar)
 const alpha = 0.85; 
 
 function interpolateColor(color1, color2, factor) {
-  let result = color1;
-  result = {
+  return {
     r: Math.round(color1.r + factor * (color2.r - color1.r)),
     g: Math.round(color1.g + factor * (color2.g - color1.g)),
     b: Math.round(color1.b + factor * (color2.b - color1.b))
   };
-  return result;
 }
 
 const updateNavbarBackground = () => {
@@ -75,4 +73,3 @@ form.addEventListener("submit", async function (e) {
     alert("Terjadi kesalahan. Coba lagi.");
   }
 });
-
