@@ -29,6 +29,7 @@ function interpolateColor(color1, color2, factor) {
     g: Math.round(color1.g + factor * (color2.g - color1.g)),
     b: Math.round(color1.b + factor * (color2.b - color1.b))
   };
+  return result;
 }
 
 const updateNavbarBackground = () => {
